@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ohayoAttack:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ohayoAttack_jar</output-path>
+    <root id="archive" name="ohayoAttack.jar">
+      <element id="module-output" name="ohayoAttack" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/fucksocks.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
