@@ -86,6 +86,7 @@ public class Main {
                         break;
                     }
                 }
+                break;
             case "slbot":
                 System.out.println("soon...");
                 //SLBot.startSCPSLBotAttack();
