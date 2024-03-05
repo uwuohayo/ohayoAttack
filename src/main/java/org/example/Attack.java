@@ -20,6 +20,7 @@ public class Attack {
     public static void startAttack(boolean PROXY, String IP, int PORT, int TIME, Method METHOD, int THREADS) {
 
         for (int i = 0; i < THREADS; i++) {
+            int finalI = i;
             Thread thread = new Thread(() -> {
                 long start = System.currentTimeMillis();
                 long end = start + TIME * 1000L;
@@ -40,8 +41,8 @@ public class Attack {
                     }
 
                     try {
-                        String[] proxyLine = proxyLines.get(rnd.nextInt(proxyLines.size())).split(":");
-                        SocksProxy proxy = null;
+                        String[] proxyLine = proxyLines.get(finalI).split(":");
+                        SocksProxy proxy;
                         if (proxyLine.length == 2) {
                             proxy = new Socks5(new InetSocketAddress(proxyLine[0], Integer.parseInt(proxyLine[1])));
                         } else {

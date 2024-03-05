@@ -1,8 +1,5 @@
 package org.example;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
@@ -10,38 +7,26 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        /*
-        File settingsFile = new File("settings.txt");
-        try {
-            Scanner fileReader = new Scanner(settingsFile);
-            while (fileReader.hasNextLine()) {
-                //proxyLines.add(fileReader.nextLine());
-            }
-            fileReader.close();
-        } catch (FileNotFoundException e1) {
-            System.out.println("File \"settings.txt\" is not found, creating...");
-            try {
-                settingsFile.createNewFile();
-            } catch (IOException e2) {
-                System.out.println("Can not create \"settings.txt\" file! Stopping...");
-                System.exit(0);
-            }
-        }
-        */
 
         System.out.println("█▀█ █░█ ▄▀█ █▄█ █▀█ ▄▀█ ▀█▀ ▀█▀ ▄▀█ █▀▀ █▄▀");
         System.out.println("█▄█ █▀█ █▀█ ░█░ █▄█ █▀█ ░█░ ░█░ █▀█ █▄▄ █░█");
-        System.out.println("welcome to ohayoAttack v2!");
+        System.out.println();
+        System.out.println("welcome to ohayoAttack v3!");
         System.out.println("大きな力には、大きな責任が伴います。");
+        System.out.println();
         System.out.println("site - twitch.tv/uwuohayo");
+        System.out.println();
         System.out.println("please write command - help, methods, attack, slbot");
         System.out.println("close panel - CTRL+C");
+        System.out.println();
         System.out.println("Ready for input ↓");
-        startProgram();
+        while (true) {
+            startProgram();
+        }
     }
     public static void startProgram() {
         String argument;
-        argument = scanner.nextLine();
+        argument = scanner.nextLine().toLowerCase();
 
         switch (argument.toLowerCase()) {
             case "help":
@@ -86,6 +71,7 @@ public class Main {
                         break;
                     }
                 }
+                break;
             case "slbot":
                 System.out.println("soon...");
                 //SLBot.startSCPSLBotAttack();
